@@ -85,6 +85,27 @@ public class MyLinkedList<K> {
 		return tempNode;
 		
 	}
+	
+	public INodeIF<K> search(K key)
+	{
+		INodeIF<K> tempNode = head;
+		INodeIF<K> requiredNode=null;
+		while(tempNode.getNext()!=null && tempNode.getKey()!=key)
+		{
+			
+			
+			tempNode=tempNode.getNext();
+		}
+		if(tempNode.getKey()==key)
+		{
+			requiredNode=tempNode;
+		}
+		
+		
+		return requiredNode;
+		
+		
+	}
 	public void  printNodes()
 	{
 		
@@ -102,6 +123,5 @@ public class MyLinkedList<K> {
 	}
 	
 }
-	
 
 	
